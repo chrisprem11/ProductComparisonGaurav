@@ -1,0 +1,111 @@
+<div class="widgets">
+      <div ba-panel ba-panel-title="" ba-panel-class="with-scroll">
+          
+           <div class="row">
+                             
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">   
+                                <div class="form-group">
+                                    <label for="leaveName">Name of this Leave?</label>
+                                    
+                                    <input type="text" placeholder="Name of this Leave" uib-typeahead="leave for leave in typeLeave | filter:$viewValue | limitTo:8" class="form-control" ng-model="leavePolicy.name">
+                                </div>
+                               
+                                 <!-- <div class="form-group">
+                                      <label for="leaveName">Name of this Leave?</label>
+                                      <ui-select ng-model="leavePolicy.name.selected"
+                                                 class="btn-group bootstrap-select form-control"
+                                                 ng-disabled="false"
+                                                 append-to-body="true"
+                                                 search-enabled="false">
+                                          <ui-select-match placeholder="Name of this Leave" >
+                                              <span> {{$select.selected.value}}</span>
+                                          </ui-select-match>
+                                          <ui-select-choices repeat="tleave in typeLeave">
+                                              <span ng-bind-html="tleave.value"></span>
+                                          </ui-select-choices>
+                                      </ui-select>
+                                </div>-->
+                                <div class="form-group">
+                                    <label for="leaveCount">What's the total number of leaves per year?</label>
+                                    <input type="text" placeholder="" class="form-control" ng-model="leavePolicy.numberOfLeavePerYear">
+                                    (Maximum number of Leaves annually)
+                                </div>
+                                <div class="form-group">
+                                    <label for="leaveType">Is this leave for a specific Department, Employee Type or Office Location?</label>
+                                    <input type="text" placeholder="Restrict to Department, Office Location..." class="form-control" ng-model="leavePolicy.termLeave">
+                                    <i class="glyphicon glyphicon-question-sign"></i>(leave it blank if this leave is for everyone in general)
+                                </div>                                
+                                <br>
+                                Leave Policies
+                                <br>                                
+                                <div class="form-group">
+                                    <label for="Text">Any Probation period before the leave becomes valid?</label>
+                                    <input type="text" placeholder="0" class="form-control" ng-model="leavePolicy.probPeriod">
+                                    in months
+                                </div>
+                                <div class="form-group">
+                                    <label for="maxLeave">Maximum leaves allowed per month</label>
+                                    <input type="text" placeholder="0" class="form-control" ng-model="leavePolicy.maxLeave">
+                                </div>
+                                <div class="form-group">
+                                    <label for="leaveCycle">What is the leave cycle?</label>
+                                    <input type="text" placeholder="" class="form-control" ng-model="leavePolicy.leaveCycle">
+                                </div>
+                            </div>
+               
+                           <!-- <h1>{{leavePolicy.selected.label}}</h1>-->
+               
+                            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            
+                                <div class="form-group">
+                                    <label for="extraDescr">Extra Description</label>
+                                    <input type="text" placeholder="" class="form-control" ng-model="leavePolicy.extraDescr">
+                                </div>
+                                <div class="form-group">
+                                    <label for="leaveSpecifyGender">Is this a gender specific leave?</label>
+                                 <!--   <input type="text" placeholder="" class="form-control" ng-model="leavePolicy.typeLeave">-->
+                                   <!--<ui-select ng-model="leavePolicy.genderValue"-->
+                                    <ui-select ng-model="leavePolicy.gspecificleave"
+                                                 class="btn-group bootstrap-select form-control"
+                                                 ng-disabled="false"
+                                                 append-to-body="true"
+                                                 search-enabled="false">
+                                          <ui-select-match placeholder="Gender Specific Leave">
+                                              <span> {{$select.selected}}</span>
+                                          </ui-select-match>
+                                          <ui-select-choices repeat="gsLeave in genderSpecificLeave">
+                                              <span ng-bind-html="gsLeave"></span>
+                                          </ui-select-choices>
+                                      </ui-select>
+                                    
+                                    (We restrict this leave to either Male/Female or All employees)
+                                </div>
+                                
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <div class="form-group">
+                                    <label for="minLeave">Minimum leaves allowed per month</label>
+                                    <input type="text" placeholder="0" class="form-control" ng-model="leavePolicy.minLeave">
+                                </div>
+                                <div class="form-group">
+                                    <label for="maxConsLeave">Maximum consecutive leaves allowed per month</label>
+                                    <input type="text" placeholder="0" class="form-control" ng-model="leavePolicy.maxConsecutiveLeave">
+                                </div>
+                            </div>
+                            
+                        </div>
+           <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="button-wrapper">
+                    <button type="button" class="btn btn-success" ng-click="save(leavePolicy)">Save</button>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <button type="button" class="btn btn-primary" ng-click="next()">next</button>
+                </div>
+                
+                      
+            </div>
+        </div>
+    </div>
+</div>

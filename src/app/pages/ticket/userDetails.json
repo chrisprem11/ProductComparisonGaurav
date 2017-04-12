@@ -1,0 +1,56 @@
+[
+            {
+                "id" : 1,
+                "email": "admin@example.com",
+                "password" : "demo",
+                "user_status" : "ACTIVE",
+                "user_role" : "admin",
+                "role_status" : "ACTIVE",
+                "remarks" : "i m admin"
+            },
+            {
+                "id" : 2,
+                "email": "agent@example.com",
+                "password" : "demo",
+                "user_status" : "ACTIVE",
+                "user_role" : "agent",
+                "role_status" : "ACTIVE",
+                "remarks" : "i am agent1"
+            },
+            {
+                "id" : 3,
+                "email" : "agent1@example.com",
+                "password" : "demo",
+                "user_status" : "ACTIVE",
+                "user_role" : "agent",
+                "role_status" : "ACTIVE",
+                "remarks" : "i am agent2"
+            },
+            {
+                "id" : 4,
+                "email": "user@example.com",
+                "password" : "demo",
+                "user_status" : "ACTIVE",
+                "user_role" : "user",
+                "role_status" : "ACTIVE",
+                "remarks" : "i am user1"
+            },    
+            {
+                "id" : 5,
+                "email" : "user2@example.com",
+                "password" : "demo",
+                "user_status" : "ACTIVE",
+                "user_role" : "user",
+                "role_status" : "ACTIVE",
+                "remarks" : "i am user2"
+            },
+            {
+                "id" : 6,
+                "email" : "user1@example.com",
+                "password" : "demo",
+                "user_status" : "ACTIVE",
+                "user_role" : "user",
+                "role_status" : "ACTIVE",
+                "remarks" : "i am user3"
+            }
+]

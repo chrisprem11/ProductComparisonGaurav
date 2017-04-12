@@ -1,0 +1,340 @@
+<div class="widgets">
+<div ba-panel ba-panel-title="" ba-panel-class="with-scroll">
+
+    <div class="row">
+
+        <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" style="border-collapse: collapse; padding: 0px;">
+            <div class="list-group">
+                <div class="list-group-item">
+                    <strong>Compare By :</strong>
+                    <br>
+                    <br>
+                    <div class="list-group" align="center">
+                        <div class="list-group-item">Jump To &nbsp;&nbsp; <i class="ion ion-ios-play"></i></div>
+                        <div class="list-group-item">Price List</div>
+                        <div class="list-group-item">Reviews</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+
+            <div class="row list-group">
+
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 list-group-item">
+
+                    <div ng-show="isLoading">
+                        <ui-select ng-model="mobName"
+                               class="btn-group bootstrap-select form-control"
+                               ng-disabled="false"
+                               append-to-body="true"
+                               search-enabled="true" ng-change="searchProduct(mobName)">
+                        <ui-select-match placeholder="Add a Mobile" >
+                            {{$select.selected}}
+                        </ui-select-match>
+                        <ui-select-choices repeat="mobile in productTypeName | filter: $select.search | limitTo : 3" >
+                            <img ng-src="{{::( 'n' | profilePicture )}}"> &nbsp;&nbsp;
+                            <span ng-bind-html="mobile"></span>
+                        </ui-select-choices>
+                        </ui-select>
+
+                        <br><br>
+
+                        <div class="row">
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <img ng-src="{{::( 'nokia' | profilePicture )}}">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                                <strong>Nokia</strong>
+                                <br><br>
+                                <strong>10000</strong>
+                            </div>
+
+                        </div>
+                        <div align="center">
+                        <button class="btn btn-primary">+ Compare</button>
+                        </div>
+                    </div>
+                        <!--<input type="text" ng-model="mobName" placeholder="Add a Mobile" uib-typeahead="mobile for mobile in typeName | filter : mobName | limitTo:8" typeahead-loading="loadingProduct" typeahead-no-results="noResults" class="form-control" ng-change="searchProduct(mobName)" ng-model-options='{ debounce: 500 }'>
+                        <i ng-show="loadingProduct" class="glyphicon glyphicon-refresh"></i>
+                        <div ng-show="noResults">
+                            <i class="glyphicon glyphicon-remove"></i> No Results Found
+                        </div>-->
+
+                    <div ng-hide="isLoading" align="center">
+                        <div class="row">
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                                <h4>
+                                    {{productType}}
+                                </h4>
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <i class="ion ion-close-circled" ng-click="clearFirstSearchProduct()"></i>
+                            </div>
+                        </div>
+                        <div class="row" align="center">
+                            <br>
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <img ng-src="{{::( 'moto' | profilePicture )}}">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                                <h5>{{productPrice}}</h5>
+                                <br>
+                                <button class="btn btn-warning">Buy Now ></button>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 list-group-item">
+
+                    <div ng-show="isLoading1">
+                    <ui-select ng-model="mobName1"
+                               class="btn-group bootstrap-select form-control"
+                               ng-disabled="false"
+                               append-to-body="true"
+                               search-enabled="true" ng-change="searchProduct1(mobName1)">
+                        <ui-select-match placeholder="Add a Mobile" >
+                            {{$select.selected}}
+                        </ui-select-match>
+                        <ui-select-choices repeat="mobile in productTypeName | filter: $select.search | limitTo : 3" >
+                             <img ng-src="{{::( 'n' | profilePicture )}}"> &nbsp;&nbsp;
+                            <span ng-bind-html="mobile"></span>
+                        </ui-select-choices>
+                    </ui-select>
+                        <!--<input type="text" ng-model="mobName1" placeholder="Add a Mobile" uib-typeahead="mobile for mobile in getProductName($viewValue) | limitTo:8" typeahead-loading="loadingProduct1" typeahead-no-results="noResults1" class="form-control" ng-change="searchProduct1(mobName1)" ng-model-options='{ debounce: 500 }'>
+                        <i ng-show="loadingProduct1" class="glyphicon glyphicon-refresh"></i>
+                        <div ng-show="noResults1">
+                            <i class="glyphicon glyphicon-remove"></i> No Results Found
+                        </div>-->
+
+                    <br><br>
+
+                    <div class="row">
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <img ng-src="{{::( 'nokia' | profilePicture )}}">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                                <strong>Nokia</strong>
+                                <br><br>
+                                <strong>10000</strong>
+                            </div>
+
+                        </div>
+                        <div align="center">
+                        <button class="btn btn-primary">+ Compare</button>
+                        </div>
+                    </div>
+
+                    <div ng-hide="isLoading1" align="center">
+                        <div class="row">
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                                <h4>
+                                    {{productType1}}
+                                </h4>
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <i class="ion ion-close-circled" ng-click="clearSecondSearchProduct()"></i>
+                            </div>
+                        </div>
+                        <div class="row" align="center">
+                            <br>
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <img ng-src="{{::( 'moto' | profilePicture )}}">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                                <h5>{{productPrice1}}</h5>
+                                <br>
+                                <button class="btn btn-warning">Buy Now ></button>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 list-group-item">
+                <!--<input type="text" ng-model="mobName2" placeholder="Add a Mobile" uib-typeahead="mobile for mobile in getProductName($viewValue) | limitTo:8" typeahead-loading="loadingProduct2" typeahead-no-results="noResults2" class="form-control" ng-change="searchProduct2(mobName2)" ng-model-options='{ debounce: 500 }'>
+
+            <i ng-show="loadingProduct2" class="glyphicon glyphicon-refresh"></i>
+            <div ng-show="noResults2">
+                    <i class="glyphicon glyphicon-remove"></i> No Results Found
+            </div>-->
+                    <div ng-show="isLoading2">
+                    <ui-select ng-model="mobName2"
+                               class="btn-group bootstrap-select form-control"
+                               ng-disabled="false"
+                               append-to-body="true"
+                               search-enabled="true" ng-change="searchProduct2(mobName2)">
+                        <ui-select-match placeholder="Add a Mobile" >
+                            {{$select.selected}}
+                        </ui-select-match>
+                        <ui-select-choices repeat="mobile in productTypeName | filter: $select.search | limitTo : 4" >
+                             <img ng-src="{{::( 'n' | profilePicture )}}"> &nbsp;&nbsp;
+                            <span ng-bind-html="mobile"></span>
+                        </ui-select-choices>
+                    </ui-select>
+
+                <br><br>
+
+                        <div class="row">
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <img ng-src="{{::( 'nokia' | profilePicture )}}">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                                <strong>Nokia</strong>
+                                <br><br>
+                                <strong>10000</strong>
+                            </div>
+
+                        </div>
+                        <div align="center">
+                        <button class="btn btn-primary">+ Compare</button>
+                        </div>
+                    </div>
+
+                    <div ng-hide="isLoading2" align="center">
+                        <div class="row">
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                                <h4>
+                                    {{productType2}}
+                                </h4>
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <i class="ion ion-close-circled" ng-click="clearThirdSearchProduct()"></i>
+                            </div>
+                        </div>
+                        <div class="row" align="center">
+                            <br>
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <img ng-src="{{::( 'moto' | profilePicture )}}">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                                <h5>{{productPrice2}}</h5>
+                                <br>
+                                <button class="btn btn-warning">Buy Now ></button>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 list-group-item">
+
+                    <div ng-show="isLoading3">
+                    <ui-select ng-model="mobName3"
+                               class="btn-group bootstrap-select form-control"
+                               ng-disabled="false"
+                               append-to-body="true"
+                               search-enabled="true" ng-change="searchProduct3(mobName3)">
+                        <ui-select-match placeholder="Add a Mobile" >
+                            {{$select.selected}}
+                        </ui-select-match>
+                        <ui-select-choices
+                                           repeat="mobile in productTypeName | filter: $select.search | limitTo : 4" >
+                             <img ng-src="{{::( 'n' | profilePicture )}}"> &nbsp;&nbsp;
+                            <span ng-bind-html="mobile"></span>
+                        </ui-select-choices>
+                    </ui-select>
+                    <br><br>
+                        <div class="row">
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <img ng-src="{{::( 'nokia' | profilePicture )}}">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                                <strong>Nokia</strong>
+                                <br><br>
+                                <strong>10000</strong>
+                            </div>
+
+                        </div>
+                        <div align="center">
+                        <button class="btn btn-primary">+ Compare</button>
+                        </div>
+                    </div>
+
+                      <div ng-hide="isLoading3" align="center">
+                        <div class="row">
+                            <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+                                <h4>
+                                    {{productType3}}
+                                </h4>
+                            </div>
+                            <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <i class="ion ion-close-circled" ng-click="clearFourthSearchProduct()"></i>
+                            </div>
+                        </div>
+                        <div class="row" align="center">
+                            <br>
+                            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <img ng-src="{{::( 'moto' | profilePicture )}}">
+                            </div>
+                            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+                                <h5>{{productPrice3}}</h5>
+                                <br>
+                                <button class="btn btn-warning">Buy Now ></button>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+            <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" style="border-collapse: collapse; padding: 0px;">
+
+                 <div class="list-group" ng-repeat="item in productAttributeName">
+                            <div class="list-group-item">
+                                {{item}}
+                            </div>
+                </div>
+
+            </div>
+            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10" style="padding:0px;">
+                <div>
+                    <div class="row">
+                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style="border-collapse: collapse; padding: 0px;" ng-hide="isLoading==true">
+                            <div class="list-group" ng-repeat="item in productAttribute" >
+                                <div class="list-group-item">
+                                    {{item.attribute.value}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style=" border-collapse: collapse; padding: 0px;">
+                            <div class="list-group" ng-repeat="item in productAttribute1">
+                                <div class="list-group-item">
+                                    {{item.attribute.value}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style=" border-collapse: collapse; padding: 0px;">
+                            <div class="list-group" ng-repeat="item in productAttribute2">
+                                <div class="list-group-item">
+                                    {{item.attribute.value}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3" style=" border-collapse: collapse; padding: 0px;">
+                            <div class="list-group" ng-repeat="item in productAttribute3">
+                                <div class="list-group-item">
+                                    {{item.attribute.value}}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+</div>
+</div>

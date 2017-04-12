@@ -1,0 +1,14 @@
+[
+    {
+    "product_category_id": 1001,
+    "product_category_name": "Mobile"
+  },
+  {
+    "product_category_id": 1002,
+    "product_category_name": "TV"
+  },
+  {
+    "product_category_id": 1003,
+    "product_category_name": "Furniture"
+  }
+]

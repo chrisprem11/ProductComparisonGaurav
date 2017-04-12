@@ -1,0 +1,77 @@
+<div class="widgets">
+    <div ba-panel ba-panel-title="" ba-panel-class="with-scroll">
+    
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" ng-model="unpaid.name" placeholder="UnPaid">
+                </div>
+                 <br>
+                <h4>How do you want Unpaid Leaves to be used</h4>
+                <br>
+               
+                <h5>Count interviewing holidays/weeklys offs as leaves ?<i class="glyphicon glyphicon-question-sign"></i></h5>
+                 
+                <div class="input-demo checkbox-demo row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <label class="checkbox-inline custom-checkbox nowrap">
+                            <input type="checkbox" id="weeklyOff" value="weeklyoff" ng-model="unpaid.type1">
+                            <span>Weekly Off</span></label>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <label class="checkbox-inline custom-checkbox nowrap">
+                            <input type="checkbox" id="holidays" ng-model="unpaid.type2" value="holidays">
+                            <span>holidays</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <br>
+                
+                <h5>Do you want to apply past dated leaves</h5>
+                
+                  <div>
+                      
+                          <label >
+                              <input type="radio" name="inlineRadioOptions" ng-model="unpaid.past" value="yes">
+                              <span>Yes</span>
+                          </label>
+                      
+                          <label>
+                              <input type="radio" name="inlineRadioOptions" ng-model="unpaid.past" value="no">
+                              <span>No</span>
+                          </label>
+                      
+                 </div>
+                <br>
+                
+                <h5>Allow half day leaves</h5>
+                
+                <div>
+                      
+                          <label>
+                              <input type="radio" name="inlineRadioOptions" ng-model="unpaid.halfDayLeave" value="yes">
+                              <span>Yes</span>
+                          </label>
+                      
+                          <label>
+                              <input type="radio" name="inlineRadioOptions"  ng-model="unPaid.halfDayLeave" value="no">
+                              <span>No</span>
+                          </label>
+                      
+                 </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="button-wrapper"><button type="button" class="btn btn-success" ng-click="save(unpaid)">Save</button></div>
+                      
+            </div>
+        </div>
+        
+    </div>
+</div>

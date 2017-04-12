@@ -1,0 +1,173 @@
+
+<div ba-panel ba-panel-title="" ba-panel-class="with-scroll">
+    <div class="row">    
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            Compared By :
+            <br>
+            <br>
+            <br>
+            
+            
+            <div class="list-group">
+            
+                <div class="list-group-item">Display</div>
+                <div class="list-group-item">Performance</div>
+                <div class="list-group-item">Camera</div>
+                <div class="list-group-item">Operating System</div>
+                <div class="list-group-item">Network</div>
+                <div class="list-group-item">Internal Memory</div>
+                <div class="list-group-item">External Memory</div>
+                
+            </div>
+          <!--  <button type="button" class="btn btn-default btn-md">Display</button><br><br>
+            
+            <button type="button" class="btn btn-default btn-md">Performance</button><br><br>
+            <button type="button" class="btn btn-default btn-md">Camera</button><br><br>
+            <button type="button" class="btn btn-default btn-md">Operating System</button><br><br>
+            <button type="button" class="btn btn-default btn-md">Network</button><br><br>
+            <button type="button" class="btn btn-default btn-md">Internal Memory</button><br><br>
+            <button type="button" class="btn btn-default btn-md">External Memory</button>
+            -->
+        </div>
+     
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            
+             <input type="text" ng-model="mobName" placeholder="Add a Mobile" uib-typeahead="mobile for mobile in getProductName($viewValue) | limitTo:8" typeahead-loading="loadingProduct" typeahead-no-results="noResults" class="form-control">
+            
+            <!--ng-change="searchProduct(mobName)" ng-model-options='{ debounce: 500 }'-->
+            
+            <i ng-show="loadingProduct" class="glyphicon glyphicon-refresh"></i>
+            <div ng-show="noResults">
+                    <i class="glyphicon glyphicon-remove"></i> No Results Found
+            </div>
+            <br>
+            <button type="button" class="btn btn-primary btn-md" ng-click="searchProduct(mobName)">check</button>
+            
+            <br><br>
+            
+            <div ng-show="isLoading==true">
+                Nokia 3310
+                <br><br>
+                <button type="button" class="btn btn-primary btn-md">+ Compare</button>
+                
+            </div>
+            
+            <div ng-hide="isLoading==true">
+            
+            {{productType}}
+            
+                <div class="list-group" ng-repeat="item in productAttribute">
+                    <div class="list-group-item">
+                        {{item.productAttribute.product_attribute_value}}
+                    </div>
+                </div>
+                
+            </div>
+            
+           <!-- <div ng-repeat="item in productType" ng-hide="isLoading==true">
+                
+                {{item.product_type_display_name}}
+                <br><br>
+            
+            <button type="button" class="btn btn-primary btn-md" ng-click="searchProductAttribute(item.product_type_id)">+ Compare</button>
+                <br><br>
+                
+                <div class="list-group" ng-repeat="item in productAttribute">
+                    <div class="list-group-item">
+                        {{item.productAttribute.product_attribute_value}}
+                    </div>
+                </div>
+            </div>-->
+       
+        </div>
+        
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            
+            <input type="text" ng-model="mobName1" placeholder="Add a Mobile" uib-typeahead="mobile for mobile in getProductName($viewValue) | limitTo:8" typeahead-loading="loadingProduct1" typeahead-no-results="noResults1" class="form-control">
+   
+            <i ng-show="loadingProduct1" class="glyphicon glyphicon-refresh"></i>
+            <div ng-show="noResults1">
+                    <i class="glyphicon glyphicon-remove"></i> No Results Found
+            </div>
+            
+            <br>
+            <button type="button" class="btn btn-primary btn-md" ng-click="searchProduct1(mobName1)">check</button>
+            <br><br>
+            
+            <div ng-show="isLoading1==true">
+                Nokia 3310
+                <br><br>
+                <button type="button" class="btn btn-primary btn-md">+ Compare</button>
+            </div>
+            
+            <div ng-hide="isLoading==true">
+                
+                {{productType1}}
+            
+                <div class="list-group" ng-repeat="item in productAttribute1">
+                    <div class="list-group-item">
+                        {{item.productAttribute.product_attribute_value}}
+                    </div>
+                </div>
+                
+            </div>            
+            <!--<div ng-repeat="item in productType1" ng-hide="isLoading1==true">
+                
+                {{item.product_type_display_name}}
+                <br><br>
+            
+            <button type="button" class="btn btn-primary btn-md" ng-click="searchProductAttribute1(item.product_type_id)">+ Compare</button>
+                <br><br>
+                
+                <div ng-repeat="item in productAttribute1">
+                    {{item.productAttribute.product_attribute_value}}
+                    <br>
+                </div>
+            </div>-->
+        </div>
+       
+        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+           
+            <input type="text" ng-model="mobName2" placeholder="Add a Mobile" uib-typeahead="mobile for mobile in getProductName($viewValue) | limitTo:8" typeahead-loading="loadingProduct2" typeahead-no-results="noResults2" class="form-control">
+   
+            <i ng-show="loadingProduct2" class="glyphicon glyphicon-refresh"></i>
+            <div ng-show="noResults2">
+                    <i class="glyphicon glyphicon-remove"></i> No Results Found
+            </div>
+            <br>
+            <button type="button" class="btn btn-primary btn-md" ng-click="searchProduct2(mobName2)">check</button>
+            <br><br>
+            
+            <div ng-show="isLoading2==true">
+                Nokia 3310
+                <br><br>
+                <button type="button" class="btn btn-primary btn-md">+ Compare</button>
+            </div>
+            
+            <div ng-hide="isLoading2==true">
+                {{productType2}}
+            
+                <div class="list-group" ng-repeat="item in productAttribute2">
+                    <div class="list-group-item">
+                        {{item.productAttribute.product_attribute_value}}
+                    </div>
+                </div>
+                
+            </div>
+            
+           <!-- <div ng-repeat="item in productType2" ng-hide="isLoading2==true">
+                
+                {{item.product_type_display_name}}
+                <br><br>
+            
+            <button type="button" class="btn btn-primary btn-md" ng-click="searchProductAttribute2(item.product_type_id)">+ Compare</button>
+                <br><br>
+                
+                <div ng-repeat="item in productAttribute2">
+                    <div>{{item.productAttribute.product_attribute_value}}</div>
+                </div>
+            </div>-->
+        </div>
+        
+    </div>
+</div>

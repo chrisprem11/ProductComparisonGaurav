@@ -1,0 +1,70 @@
+<div class="widgets">
+    <div ba-panel ba-panel-title="" ba-panel-class="with-scroll">
+        
+       <div clas="row" style="background:powderblue;"> 
+           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+               <span class="label label-info">Note</span>
+         Click On Policy Name to Know more details
+           </div>
+        </div>
+        <br><br><br>
+        <div ng-repeat="x in manageLeave">
+          <section style="border-style: solid; border-color: #aaff80;" align="center">
+                <br>
+                <h4>{{x.value}}</h4>
+                <br>
+                <h4>{{x.inc}}</h4>
+                <br>
+                <br>
+                <br> 
+                <div class="row">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><button type="button" class="btn btn-warning" ng-click="edit()">Edit</button></div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><button type="button" class="btn btn-danger" >Disable</button></div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><button type="button" class="btn btn-danger" ng-click="delete($index)">Delete</button></div>
+                </div>
+                <br>
+            </section>
+            
+            
+            
+            <br><br><br>
+            
+          <!--  <section class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="border-style: solid; border-color: #aaff80;" align="center">
+                <br>
+                <h4>Sick Leave</h4>
+                <br>
+                <h4>6 per annum</h4>
+                <br>
+                <br>
+                <br> 
+                <div class="row">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><button type="button" class="btn btn-warning" ng-click="edit()">Edit</button></div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><button type="button" class="btn btn-danger">Disable</button></div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><button type="button" class="btn btn-danger">Delete</button></div>
+                </div>
+                <br>
+            </section>-->
+          <!--  <section class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></section>
+            <section class="col-xs-4 col-sm-4 col-md-4 col-lg-4" style="border-style: solid; border-color: #aaff80;" align="center">
+                 <br>
+                <h4>Casual Leave</h4>
+                <br>
+                <h4>18 per annum</h4>
+                <br>
+                <br>
+                <br> 
+                <div class="row">
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><button type="button" class="btn btn-warning">Edit</button></div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><button type="button" class="btn btn-danger">Disable</button></div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"><button type="button" class="btn btn-danger">Delete</button></div>
+                </div>
+                <br>
+            </section>
+            <section class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></section>        -->
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+</div>

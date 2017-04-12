@@ -1,0 +1,193 @@
+<div class="widgets">
+      <div ba-panel ba-panel-title="Collapse Form" ba-panel-class="with-scroll">
+        
+       <uib-accordion>
+           
+            <uib-accordion-group heading="Credit leaves on a Pro-Rata basis?" panel-class="panel-default bootstrap-panel accordion-panel">
+                  Status
+             <div class="radio">
+                            <label><input type="radio" name="optradio">Yes</label><br>
+                            <label><input type="radio" name="optradio">No</label>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                
+                    Probation Status
+                    <div class="radio">
+                            <label><input type="radio" name="optLeaves">Start calculating leaves from joining date</label><br>
+                            <label><input type="radio" name="optLeaves">Start calculating leaves after probation period</label>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                Mid joining leaves<br>
+                     <label><input type="checkbox" value="">&nbsp;Credit half months leaves, if employee joins after 15th day of the month</label>
+                </div>
+            </div>
+           </uib-accordion-group>
+          
+            <uib-accordion-group heading="Credit the leaves on accural basis?" panel-class="panel-default bootstrap-panel accordion-panel">
+            Status
+             <div class="radio">
+                            <label><input type="radio" name="optradio">Yes</label><br>
+                            <label><input type="radio" name="optradio">No</label>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                
+                   Is Monthly Or Quarterly
+                    <div class="radio">
+                            <label><input type="radio" name="optradio">Monthly Basis</label><br>
+                            <label><input type="radio" name="optradio">Quarterly Basis</label>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="radio">
+                            <label><input type="radio" name="optradio">Begining of every month</label><br>
+                            <label><input type="radio" name="optradio">After end of every month</label>
+                    </div>
+                </div>
+            </div>
+           </uib-accordion-group>
+        
+        <uib-accordion-group heading="Allow half-day using this leave?" panel-class="panel-default bootstrap-panel accordion-panel">
+        
+            Status
+             <div class="radio">
+                            <label><input type="radio" name="optradio">Yes</label><br>
+                            <label><input type="radio" name="optradio">No</label>
+            </div>
+        
+        </uib-accordion-group>
+       
+        <uib-accordion-group heading="Carry forward unused leaves to the next leave cycle" panel-class="panel-default bootstrap-panel accordion-panel">
+        
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                
+                   Status
+                    <div class="radio">
+                            <label><input type="radio" name="optradio">Yes</label><br>
+                            <label><input type="radio" name="optradio">No</label>
+                    </div><br>
+                    <select id="ddlsearch" class="selectpicker form-control" data-style="btn-primary">
+                                <option value="" data-hidden="true" class="ddl-title">Standard Select</option>
+                                <option value="">Fixed</option>
+                                <option value="">Percentage</option>
+                            </select>
+                    <br>
+                    Remaining Leaves
+                    <div class="radio">
+                            <label><input type="radio" name="optradio">Discard</label><br>
+                            <label><input type="radio" name="optradio">Leave Encashment</label>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    Carry Forward
+                    <div class="radio">
+                            <label><input type="radio" name="optradio">Carry forward all unused leaves</label><br>
+                            <label><input type="radio" name="optradio">Carry forward only</label>
+                    </div>
+                    <br>
+                             <input type="text" placeholder="0" class="form-control" id="Text">
+                </div>
+            </div>
+            
+        </uib-accordion-group>
+        
+        <uib-accordion-group heading="Count intervening holidays/weeklys offs as leaves?" panel-class="panel-default bootstrap-panel accordion-panel">
+        
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                
+                   Status
+             <div class="radio">
+                            <label><input type="radio" name="optradio">Yes</label><br>
+                            <label><input type="radio" name="optradio">No</label>
+                </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                Count Intervening Holidays<br>
+                     <label><input type="checkbox" value="">&nbsp;Count Holidays</label><br>
+                     <label><input type="checkbox" value="">&nbsp;Count Weekly Offs</label>
+                </div>
+            </div>
+        
+        </uib-accordion-group>
+        
+        <uib-accordion-group heading="Past dated leave applications allowed?" panel-class="panel-default bootstrap-panel accordion-panel">
+        
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                
+                   Status
+             <div class="radio">
+                            <label><input type="radio" name="optradio">Yes</label><br>
+                            <label><input type="radio" name="optradio">No</label>
+            </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                 <div class="form-group">
+                            <label for="Text">No of Days</label>
+                            <input type="text" placeholder="1" class="form-control" id="Text">
+                        </div>
+                </div>
+            </div>
+        
+        </uib-accordion-group>
+        
+        <uib-accordion-group heading="Can employees club this leave with any other leave?" panel-class="panel-default bootstrap-panel accordion-panel">
+        
+            Status
+             <div class="radio">
+                            <label><input type="radio" name="optradio">Yes</label><br>
+                            <label><input type="radio" name="optradio">No</label>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                
+                    Probation Status
+                    <div class="radio">
+                            <label><input type="radio" name="optradio">Start calculating leaves from joining date</label><br>
+                            <label><input type="radio" name="optradio">Start calculating leaves after probation period</label>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                Mid joining leaves<br>
+                     <label><input type="checkbox" value="">&nbsp;Credit half months leaves, if employee joins after 15th day of the month</label>
+                </div>
+            </div>
+        
+        </uib-accordion-group>
+        
+        <uib-accordion-group heading="Can employees apply for more than their available leave balance?" panel-class="panel-default bootstrap-panel accordion-panel">
+            Status
+             <div class="radio">
+                            <label><input type="radio" name="optradio">Yes</label><br>
+                            <label><input type="radio" name="optradio">No</label>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                
+                    Probation Status
+                    <div class="radio">
+                            <label><input type="radio" name="optradio">Start calculating leaves from joining date</label><br>
+                            <label><input type="radio" name="optradio">Start calculating leaves after probation period</label>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                Mid joining leaves<br>
+                     <label><input type="checkbox" value="">&nbsp;Credit half months leaves, if employee joins after 15th day of the month</label>
+                </div>
+            </div>
+
+        </uib-accordion-group>
+  
+          </uib-accordion>
+            <div class="button-wrapper"><button type="button" class="btn btn-success" ng-click="save(leavePolicy)">Save</button></div>
+    </div>
+</div>
+     

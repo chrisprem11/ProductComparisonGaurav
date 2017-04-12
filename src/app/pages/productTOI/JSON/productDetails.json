@@ -1,0 +1,218 @@
+[
+  {
+    "id": 7,
+    "productType": {
+      "productTypeId": 3,
+      "productType": "Xiaomi",
+      "productDisplayName": "Xiaomi Redmi Plus",
+      "category": {
+        "productCategoryId": 1,
+        "productCategory": "Mobile"
+      }
+    },
+    "attribute": {
+      "attributeId": 2,
+      "attributes": "Summary_Display",
+      "value": "5.0",
+      "attributeDisplayName": "Summary Display"
+    }
+  },
+  {
+    "id": 8,
+    "productType": {
+      "productTypeId": 3,
+      "productType": "Xiaomi",
+      "productDisplayName": "Xiaomi Redmi Plus",
+      "category": {
+        "productCategoryId": 1,
+        "productCategory": "Mobile"
+      }
+    },
+    "attribute": {
+      "attributeId": 6,
+      "attributes": "Summary_Camera",
+      "value": "16MP",
+      "attributeDisplayName": "Summary Camera"
+    }
+  },
+  {
+    "id": 9,
+    "productType": {
+      "productTypeId": 3,
+      "productType": "Xiaomi",
+      "productDisplayName": "Xiaomi Redmi Plus",
+      "category": {
+        "productCategoryId": 1,
+        "productCategory": "Mobile"
+      }
+    },
+    "attribute": {
+      "attributeId": 8,
+      "attributes": "General_OS",
+      "value": "Android v5.2.0",
+      "attributeDisplayName": "General Operating System"
+    }
+  },
+  {
+    "id": 10,
+    "productType": {
+      "productTypeId": 3,
+      "productType": "Xiaomi",
+      "productDisplayName": "Xiaomi Redmi Plus",
+      "category": {
+        "productCategoryId": 1,
+        "productCategory": "Mobile"
+      }
+    },
+    "attribute": {
+      "attributeId": 12,
+      "attributes": "General_Sim",
+      "value": "mini",
+      "attributeDisplayName": "General Sim Size"
+    }
+  },
+  {
+    "id": 11,
+    "productType": {
+      "productTypeId": 3,
+      "productType": "Xiaomi",
+      "productDisplayName": "Xiaomi Redmi Plus",
+      "category": {
+        "productCategoryId": 1,
+        "productCategory": "Mobile"
+      }
+    },
+    "attribute": {
+      "attributeId": 16,
+      "attributes": "Storage",
+      "value": "8GB",
+      "attributeDisplayName": "Internal Storage"
+    }
+  },
+  {
+    "id": 12,
+    "productType": {
+      "productTypeId": 3,
+      "productType": "Xiaomi",
+      "productDisplayName": "Xiaomi Redmi Plus",
+      "category": {
+        "productCategoryId": 1,
+        "productCategory": "Mobile"
+      }
+    },
+    "attribute": {
+      "attributeId": 15,
+      "attributes": "Storage",
+      "value": "64GB",
+      "attributeDisplayName": "External Storage"
+    }
+  },
+  {
+    "id": 1,
+    "productType": {
+      "productTypeId": 4,
+      "productType": "Moto",
+      "productDisplayName": "Moto X play",
+      "category": {
+        "productCategoryId": 1,
+        "productCategory": "Mobile"
+      }
+    },
+    "attribute": {
+      "attributeId": 1,
+      "attributes": "Summary_Display",
+      "value": "5.5",
+      "attributeDisplayName": "Summary Display"
+    }
+  },
+  {
+    "id": 2,
+    "productType": {
+      "productTypeId": 4,
+      "productType": "Moto",
+      "productDisplayName": "Moto X play",
+      "category": {
+        "productCategoryId": 1,
+        "productCategory": "Mobile"
+      }
+    },
+    "attribute": {
+      "attributeId": 4,
+      "attributes": "Summary_Camera",
+      "value": "21MP",
+      "attributeDisplayName": "Summary Camera"
+    }
+  },
+  {
+    "id": 3,
+    "productType": {
+      "productTypeId": 4,
+      "productType": "Moto",
+      "productDisplayName": "Moto X play",
+      "category": {
+        "productCategoryId": 1,
+        "productCategory": "Mobile"
+      }
+    },
+    "attribute": {
+      "attributeId": 9,
+      "attributes": "General_OS",
+      "value": "Android v6.0",
+      "attributeDisplayName": "General Operating System"
+    }
+  },
+  {
+    "id": 4,
+    "productType": {
+      "productTypeId": 4,
+      "productType": "Moto",
+      "productDisplayName": "Moto X play",
+      "category": {
+        "productCategoryId": 1,
+        "productCategory": "Mobile"
+      }
+    },
+    "attribute": {
+      "attributeId": 11,
+      "attributes": "General_Sim",
+      "value": "nano",
+      "attributeDisplayName": "General Sim Size"
+    }
+  },
+  {
+    "id": 5,
+    "productType": {
+      "productTypeId": 4,
+      "productType": "Moto",
+      "productDisplayName": "Moto X play",
+      "category": {
+        "productCategoryId": 1,
+        "productCategory": "Mobile"
+      }
+    },
+    "attribute": {
+      "attributeId": 13,
+      "attributes": "Storage",
+      "value": "16GB",
+      "attributeDisplayName": "Internal Storage"
+    }
+  },
+  {
+    "id": 6,
+    "productType": {
+      "productTypeId": 4,
+      "productType": "Moto",
+      "productDisplayName": "Moto X play",
+      "category": {
+        "productCategoryId": 1,
+        "productCategory": "Mobile"
+      }
+    },
+    "attribute": {
+      "attributeId": 14,
+      "attributes": "Storage",
+      "value": "32GB",
+      "attributeDisplayName": "External Storage"
+    }
+  }
+]

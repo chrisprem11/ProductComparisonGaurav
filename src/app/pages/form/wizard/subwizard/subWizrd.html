@@ -1,0 +1,109 @@
+<div class="widgets">
+<div class="row">
+        <div class="col-md-12">
+            <div ba-panel ba-panel-title="Sub Form Wizard" ba-panel-class="with-scroll">
+                <sub-wizard>
+                    <sub-wizard-step title="Section One" form="swc.sectionOneForm">
+                        
+                        <form name="swc.sectionOneForm" novalidate>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group has-feedback"
+                                         ng-class="{'has-error': swc.sectionOneForm.username.$invalid && (swc.sectionOneForm.username.$dirty || swc.sectionOneForm.$submitted)}">
+                                        <label for="exampleUsername1">Name</label>
+                                        <input type="text" class="form-control" id="exampleUsername1" name="username" placeholder="Username" ng-model="swc.sectionOne.username" required>
+                                        <span class="help-block error-block basic-block">Required</span>
+                                    </div>
+                                   <!-- <div class="form-group" ng-class="{'has-error': swc.sectionOneForm.email.$invalid && (swc.sectionOneForm.email.$dirty || swc.sectionOneForm.$submitted)}">
+                                        <label for="exampleInputEmail1">User Email</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Email" ng-model="swc.sectionOne.email" required>
+                                        <span class="help-block error-block basic-block">Proper email required</span>
+                                    </div>-->
+                                </div>
+                                <div class="col-md-6">
+                                    
+                                    <div class="form-group" ng-class="{'has-error': swc.sectionOneForm.password.$invalid && (swc.sectionOneForm.password.$dirty || swc.sectionOneForm.$submitted)}">
+                                        <label for="exampleInputPassword1">Password</label>
+                                        <input type="password" class="form-control" id="exampleInputPassword1" name="password" placeholder="Password" ng-model="swc.sectionOne.password" required>
+                                        <span class="help-block error-block basic-block">Required</span>
+                                    </div>
+                                    <!--<div class="form-group"  ng-class="{'has-error': !swc.areSectionOnePasswordsEqual() && (swc.sectionOneForm.confirmPassword.$dirty || swc.sectionOneForm.$submitted)}">
+                                        <label for="exampleInputConfirmPassword1">Confirm Password</label>
+                                        <input type="password" class="form-control" id="exampleInputConfirmPassword1" name="confirmPassword" placeholder="Confirm Password" ng-model="swc.sectionOne.confirmPassword" required>
+                                        <span class="help-block error-block basic-block">Passwords should match</span>
+                                    </div>-->
+                                    </div>
+                                </div>
+                          
+                        </form>
+                        
+                    </sub-wizard-step>
+                    <sub-wizard-step title="Section Two" form="swc.sectionTwoForm">
+                        <form name="swc.sectionTwoForm" novalidate>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group has-feedback"
+                                         ng-class="{'has-error': swc.sectionTwoForm.productName.$invalid && (swc.sectionTwoForm.productName.$dirty || swc.sectionTwoForm.$submitted)}">
+                                        <label for="productName">City</label>
+                                        <input type="text" class="form-control" id="productName" name="productName" placeholder="City" ng-model="swc.sectionTwo.productName" required>
+                                        <span class="help-block error-block basic-block">Required</span>
+                                    </div>
+                                    <!--<div class="form-group" ng-class="{'has-error': swc.sectionTwoForm.productId.$invalid && (swc.sectionTwoForm.productId.$dirty || swc.sectionTwoForm.$submitted)}">
+                                        <label for="productId">State</label>
+                                        <input type="text" class="form-control" id="productId" name="productId" placeholder="State" ng-model="swc.sectionTwo.productId" required>
+                                        <span class="help-block error-block basic-block">Required</span>
+                                    </div>-->
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="productName">State</label>
+                                        <select class="form-control" title="Category" selectpicker>
+                                            <option selected>Karnataka</option>
+                                            <option>A P</option>
+                                            <option>U P</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </sub-wizard-step>
+                    <sub-wizard-step title="Section Three"  form="swc.addressForm">
+                        <form name="swc.addressForm" novalidate>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group has-feedback"
+                                         ng-class="{'has-error': swc.addressForm.address.$invalid && (swc.addressForm.address.$dirty || swc.addressForm.$submitted)}">
+                                        <label for="productName">Mob No</label>
+                                        <input type="text" class="form-control" id="address" name="address" placeholder="Mob No" ng-model="swc.shipment.address" required>
+                                        <span class="help-block error-block basic-block">Required</span>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                  <!--  <div class="form-group">
+                                        <label for="productName">Telephone</label>
+                                        <select class="form-control" title="Category" selectpicker>
+                                            <option selected>Fast & expensive</option>
+                                            <option>Cheap & free</option>
+                                        </select>
+                                    </div>-->
+                                </div>
+                            </div>
+                          <!--  <div class="checkbox">
+                                <label class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <span>Save shipment info</span>
+                                </label>
+                            </div>-->
+                        </form>
+                    </sub-wizard-step>
+                    <sub-wizard-step title="Sub Form Finish">
+                        <form class="form-horizontal" name="swc.finishForm" novalidate>
+                            Congratulations! You have successfully filled the form!
+                        </form>
+                    </sub-wizard-step>
+                </sub-wizard>
+            </div>
+        </div>
+    </div>
+    </div>
